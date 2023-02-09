@@ -6,6 +6,8 @@ body {
 
 body,
 .container {
+    display: flex; 
+    justify-content: center;   
     height: 100vh;
     color: white;
     font-family: 'Overpass', sans-serif;
@@ -17,6 +19,8 @@ body,
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
+    max-width: 350px;
+    min-width: 350px;
 }
 
 .rate-container,
@@ -93,4 +97,43 @@ button {
 button:hover {
     background-color: white;
     color: hsl(25, 97%, 53%);
+}
+
+li:hover,
+button:hover {
+    cursor: pointer;
+}
+
+.ty-container {
+    text-align: center;
+}
+
+.ty-container h4 {
+    color: hsl(25, 97%, 53%);
+    font-weight: 400;
+    background-color: hsl(213, 17%, 24%);
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 30px;
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 400px;
+        min-width: 400px;        
+    }   
+    
+    .rate-container,
+    .ty-container {
+        padding: 2rem;
+    }    
+
+    .rate-container img,
+    li {
+        padding: 0.9rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
 }
